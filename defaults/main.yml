@@ -14,3 +14,4 @@ nodejs_file_name: "{{nodejs_file_tag}}.tar.gz"
 nodejs_base_url: "http://nodejs.org/dist/v{{nodejs_version}}/"
 nodejs_tarball_url: "{{nodejs_base_url}}{{nodejs_file_name}}"
 nodejs_shasum_url: "{{nodejs_base_url}}SHASUMS256.txt"
+nodejs_build_cores: 1 # How many CPU will we use to build the sources

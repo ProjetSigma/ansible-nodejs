@@ -23,7 +23,7 @@
   when: wanted_version_installed.rc == 1
 
 - name: Compile and install nodejs {{nodejs_version_tag}}
-  shell: ./configure --prefix={{nodejs_path}} && make && make install chdir={{nodejs_tmp_dir}}{{nodejs_file_tag}}
+  shell: ./configure --prefix={{nodejs_path}} && make -j"{{ nodejs_build_cores }}" && make install chdir={{nodejs_tmp_dir}}{{nodejs_file_tag}}
   sudo: true
   when: wanted_version_installed.rc == 1
 
